@@ -5,25 +5,27 @@ package com.example.android.quakereport;
  */
 
 public class EarthquakeItem {
-    String magnitude;
+    Double magnitude;
     String city;
-    String date;
+    long date;
+    String webAdress;
 
 
     public EarthquakeItem() {
     }
 
-    public EarthquakeItem(String magnitude, String city, String date){
+    public EarthquakeItem(Double magnitude, String city, long date, String webAdress){
         this.magnitude=magnitude;
         this.city=city;
         this.date=date;
+        this.webAdress=webAdress;
     }
 
-    public String getMagnitude() {
+    public Double getMagnitude() {
         return magnitude;
     }
 
-    public void setMagnitude(String magnitude) {
+    public void setMagnitude(Double magnitude) {
         this.magnitude = magnitude;
     }
 
@@ -35,11 +37,16 @@ public class EarthquakeItem {
         this.city = city;
     }
 
-    public String getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(long date) {
         this.date = date;
     }
+
+    public String getWebAdress() { return webAdress; }
+
+    public void setWebAdress(String webAdress) { this.webAdress = webAdress; }
+
 }
